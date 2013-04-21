@@ -4,8 +4,8 @@ module MandrillApi
       def list(api_key)
         find(:all, :from => "/api/1.0/templates/list.xml?key=#{api_key}")
       end
-      def add(api_key)
-        create(:from => "/api/1.0/templates/list.xml?key=#{api_key}&name=#{'my_first_temp'}&code=#{'321fsaew21'}")
+      def add(api_key, template_name, list_id)
+        create(:from => "/api/1.0/templates/list.xml?key=#{api_key}&name=#{template_name}&code=#{list_id}")
       end
     end
   end
